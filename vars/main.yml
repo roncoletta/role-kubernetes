@@ -1,0 +1,6 @@
+---
+v_kubernetes_lxc_conf:
+  - 'lxc.apparmor.profile: unconfined'
+  - 'lxc.cgroup2.devices.allow: a'
+  - 'lxc.cap.drop:'
+  - 'lxc.mount.auto: "proc:rw sys:rw"'

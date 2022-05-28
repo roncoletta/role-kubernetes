@@ -1,0 +1,6 @@
+---
+- block:
+    - name: import_tasks
+      import_tasks: echo.yml
+  tags: [kubernetes]
+        

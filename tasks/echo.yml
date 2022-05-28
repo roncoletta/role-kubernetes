@@ -1,0 +1,37 @@
+---
+
+# tasks file for role-kubernetes
+
+- name: Ls /
+  shell:
+    cmd: ls /
+    chdir: /
+  register: ls_result
+
+- name: Debug
+  debug:
+    var: ls_result
+
+
+# - name: Copy conf-kmsg.sh
+#   copy:
+#     src: conf-kmsg.sh
+#     dest: /usr/local/bin/conf-kmsg.sh
+#     mode: x
+#     owner: root
+#     group: root
+
+# - name: Copy conf-kmsg.service
+#   copy:
+#     src: conf-kmsg.service
+#     dest: /etc/systemd/system/conf-kmsg.service
+#     mode: x
+#     owner: root
+#     group: root
+
+# - name: Systemctl reload conf-kmsg.service
+#   systemd:
+#     name: conf-kmsg.service
+#     enabled: true
+#     state: reloaded
+    
